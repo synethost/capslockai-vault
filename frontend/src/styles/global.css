@@ -1,0 +1,120 @@
+/* Offline-bundled fonts — installed via npm, no CDN needed */
+@import '@fontsource/fraunces/300.css';
+@import '@fontsource/fraunces/300-italic.css';
+@import '@fontsource/fraunces/500.css';
+@import '@fontsource/dm-sans/300.css';
+@import '@fontsource/dm-sans/400.css';
+@import '@fontsource/dm-sans/500.css';
+
+/* ── Reset ──────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body, #root { height: 100%; overflow: hidden; }
+
+/* ── Design Tokens ───────────────────────────────────────────────────── */
+:root {
+  /* Backgrounds */
+  --bg:        #0d1117;
+  --surface:   #161b22;
+  --card:      #1c2430;
+  --card-hover:#1f2937;
+
+  /* Borders */
+  --border:    rgba(255,255,255,0.08);
+  --border-md: rgba(255,255,255,0.14);
+  --border-hi: rgba(255,255,255,0.22);
+
+  /* Brand */
+  --amber:       #e8a048;
+  --amber-light: #f0af60;
+  --amber-dim:   rgba(232,160,72,0.12);
+  --amber-glow:  rgba(232,160,72,0.06);
+
+  /* Semantic */
+  --green:     #3fb950;
+  --green-dim: rgba(63,185,80,0.10);
+  --red:       #f85149;
+  --red-dim:   rgba(248,81,73,0.12);
+  --blue:      #58a6ff;
+  --blue-dim:  rgba(88,166,255,0.12);
+
+  /* Text */
+  --text-1:   #f0f6fc;
+  --text-2:   #8b949e;
+  --text-3:   #484f58;
+
+  /* Typography */
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-ui:      'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Radii */
+  --r-sm:  6px;
+  --r-md:  10px;
+  --r-lg:  14px;
+  --r-xl:  20px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.35);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.45);
+
+  /* Transitions */
+  --t-fast:   0.12s ease;
+  --t-normal: 0.22s ease;
+}
+
+/* ── Base ────────────────────────────────────────────────────────────── */
+body {
+  font-family: var(--font-ui);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-1);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Scrollbars ─────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-md); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--border-hi); }
+
+/* ── Focus ring ─────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid rgba(232,160,72,0.6);
+  outline-offset: 2px;
+  border-radius: var(--r-sm);
+}
+
+/* ── Animations ─────────────────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50%       { opacity: 0.8; transform: scale(1.04); }
+}
+@keyframes breathe {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+@keyframes typingBounce {
+  0%, 100% { transform: translateY(0); opacity: 0.4; }
+  50%       { transform: translateY(-5px); opacity: 1; }
+}
+
+.fade-up  { animation: fadeUp 0.35s ease both; }
+.fade-in  { animation: fadeIn 0.25s ease both; }
+
+/* ── Utility ─────────────────────────────────────────────────────────── */
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}

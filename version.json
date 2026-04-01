@@ -1,0 +1,8 @@
+{
+  "version": "1.1.0",
+  "released": "2026-04-01",
+  "notes": "Faster document search, bug fixes",
+  "download_url": "https://github.com/YOUR_GITHUB_USERNAME/capslockai-vault/releases/download/v1.1.0/vault-update-1.1.0.zip",
+  "min_version": "1.0.0",
+  "sha256": "45d5fb59edbeef3a11662b544098eeb995f32f5260f4b6f956a9419373abb0e5"
+}
