@@ -10,7 +10,7 @@ from fastapi.responses import FileResponse, JSONResponse
 import config
 from config import ensure_dirs
 from database import init_db
-from routers import auth, vault, documents, chat, status, users, settings
+from routers import auth, vault, documents, chat, status, dashboard, users, settings
 
 
 # ── Lifespan ──────────────────────────────────────────────────────────
@@ -47,6 +47,7 @@ app.include_router(vault.router)
 app.include_router(documents.router)
 app.include_router(chat.router)
 app.include_router(status.router)
+app.include_router(dashboard.router)
 app.include_router(settings.router)
 app.include_router(users.router)
 
