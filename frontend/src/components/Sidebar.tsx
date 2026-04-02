@@ -150,14 +150,13 @@ export default function Sidebar() {
         )}
       </div>
 
-      {/* Settings footer */}
-      <div style={{ padding: '0 0.8rem 0.8rem' }}>
-        <button
-          onClick={() => navigate('/settings')}
-          style={{ width: '100%', padding: '8px', background: 'none', border: 'none', borderRadius: 'var(--r-sm)', fontSize: 12, color: 'var(--text-3)', cursor: 'pointer', fontFamily: 'var(--font-ui)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, transition: 'all 0.15s' }}
-          onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.04)'; e.currentTarget.style.color = 'var(--text-2)' }}
-          onMouseLeave={(e) => { e.currentTarget.style.background = 'none'; e.currentTarget.style.color = 'var(--text-3)' }}
-        >
+      {/* Footer nav */}
+      <div style={{ padding: '0 0.8rem 0.8rem', display: 'flex', flexDirection: 'column', gap: 2 }}>
+        <button onClick={() => navigate('/dashboard')} style={{ width: '100%', padding: '8px', background: 'none', border: 'none', borderRadius: 'var(--r-sm)', fontSize: 12, color: 'var(--text-3)', cursor: 'pointer', fontFamily: 'var(--font-ui)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, transition: 'all 0.15s' }} onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.04)'; e.currentTarget.style.color = 'var(--text-2)' }} onMouseLeave={(e) => { e.currentTarget.style.background = 'none'; e.currentTarget.style.color = 'var(--text-3)' }}>
+          <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><rect x="1" y="1" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.2"/><rect x="8" y="1" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.2"/><rect x="1" y="8" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.2"/><rect x="8" y="8" width="5" height="5" rx="1" stroke="currentColor" strokeWidth="1.2"/></svg>
+          Dashboard
+        </button>
+        <button onClick={() => navigate('/settings')} style={{ width: '100%', padding: '8px', background: 'none', border: 'none', borderRadius: 'var(--r-sm)', fontSize: 12, color: 'var(--text-3)', cursor: 'pointer', fontFamily: 'var(--font-ui)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6, transition: 'all 0.15s' }} onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(255,255,255,0.04)'; e.currentTarget.style.color = 'var(--text-2)' }} onMouseLeave={(e) => { e.currentTarget.style.background = 'none'; e.currentTarget.style.color = 'var(--text-3)' }}>
           <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="2.5" stroke="currentColor" strokeWidth="1.2"/><path d="M7 1v1.5M7 11.5V13M1 7h1.5M11.5 7H13M2.93 2.93l1.06 1.06M10.01 10.01l1.06 1.06M2.93 11.07l1.06-1.06M10.01 3.99l1.06-1.06" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/></svg>
           Settings
         </button>
